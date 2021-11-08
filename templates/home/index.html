@@ -1,15 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% block body %}
 
+  <!-- Newsletter Popup -->
+<!--  <div id="myModal" class="modal fade">-->
+<!--    <div class="modal-dialog newsletter-popup">-->
+<!--      <div class="modal-content">-->
+<!--        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
+<!--          <video controls autoplay loop>-->
+<!--            <source src="{% static 'assets/img/Business-Elite-video.mp4' %}" type="video/mp4"/>-->
+<!--            <source src="{% static 'assets/img/Business-Elite-video.ogg' %}" type="video/ogg"/>-->
+<!--          </video>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
   <!-- ================ Start Background Header ================== -->
 
   <!-- particles.js container -->
   <div id="particles-js"></div>
 
-
   <!-- ================ Slider Sections ================== -->
-
 
   <!-- Slider main container -->
   <div class="swiper-header">
@@ -19,9 +30,9 @@
       <!-- Start One Slides -->
       <div class="swiper-slide">
         <div class="col-md-6 col-sm-12 info">
-          <h2 class="title">Dox Solutions</h2>
-          <p class="content">Dox Solutions Cloud Programs to manage all business<br>
-             and control provisions on their resources from anywhere <br>and at any time.
+          <h2 class="title">{% trans "Dox Solutions" %}</h2>
+          <p class="content">{% trans "Dox Solutions Cloud Programs to manage all business" %}<br>
+             {% trans "and control provisions on their resources from anywhere" %} <br>{% trans "and at any time." %}
           </p>
         </div>
 
@@ -34,8 +45,9 @@
       <!-- Start Two Slides -->
       <div class="swiper-slide">
         <div class="col-md-6 info">
-          <h2 class="title">Digital Marketing</h2>
-          <p class="content">- Marketing plans<br>- Social networking management<br>- Configuring search engines<br>- Advertising campaigns
+          <h2 class="title">{% trans "Digital Marketing" %}</h2>
+          <p class="content">- {% trans "Marketing plans" %}<br>- {% trans "Social networking management" %}<br>
+            - {% trans "Configuring search engines" %}<br>- {% trans "Advertising campaigns" %}
           </p>
         </div>
 
@@ -48,8 +60,9 @@
       <!-- Start Three Slides -->
       <div class="swiper-slide">
         <div class="col-md-6 info">
-          <h2 class="title">Mobile Applications</h2>
-          <p class="content">We develop mobile applications that meet companies and<br> improve their activities in a professional and innovative manner.
+          <h2 class="title">{% trans "Mobile Applications" %}</h2>
+          <p class="content">{% trans "We develop mobile applications that meet companies and" %}<br>
+            {% trans "improve their activities in a professional and innovative manner" %}.
           </p>
         </div>
 
@@ -62,8 +75,9 @@
       <!-- Start Four Slides -->
       <div class="swiper-slide">
         <div class="col-md-6 info">
-          <h2 class="title">E-commerce Solutions</h2>
-          <p class="content">The strength of your business activity through the<br> creation of an electronic website is your distinctive<br> gateway in the e-commerce.
+          <h2 class="title">{% trans "E-commerce Solutions" %}</h2>
+          <p class="content">{% trans "The strength of your business activity through the" %}<br>
+            {% trans "creation of an electronic website is your distinctive" %}<br> {% trans "gateway in the e-commerce" %}.
           </p>
         </div>
 
@@ -90,15 +104,14 @@
 
   <main id="main">
 
-
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container" data-aos="zoom-in">
 
         <div class="row">
           <div class="col-lg-12 col-md-12 text-center">
-            <p> We provide integrated digital solutions that helps you enhance your presence in the online business
-              world</p>
+            <p>{% trans "We provide integrated digital solutions that helps you enhance your presence in the online business
+              world" %}</p>
           </div>
         </div>
 
@@ -109,7 +122,7 @@
     <div class="cards-container" data-aos="zoom-in" data-aos-duration="3000" data-aos-easing="ease-in-out-cubic">
 
       <div class="container">
-        <h2 class="title">Dox Solutions</h2>
+        <h2 class="title">{% trans "Dox Solutions" %}</h2>
         <div class="row mt-5">
 
           <div class="cards__box">
@@ -123,7 +136,7 @@
                   <div>
                   <h3>{{card.title}}</h3>
                   <p>{{ card.description|safe}}</p>
-                  <a href="{% url 'properties:dox_detail' card.slug %}" target="_blank">More Details</a>
+                  <a href="{% url 'properties:dox_detail' card.slug %}" target="_blank">{% trans "More Details" %}</a>
                   </div>
                 </div>
               </div>
@@ -140,7 +153,7 @@
     <div class="services contaienr-fluid">
       <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-quad">
         <div class="session-title">
-          <h2 class="elite-title">Elite Solutions</h2>
+          <h2 class="elite-title">{% trans "Elite Solutions" %}</h2>
         </div>
         <div class="row">
           {% for card in cards_elite %}
@@ -150,7 +163,7 @@
                 <span class="stars"></span>
                 <h2 class="java">{{card.title}}</h2>
                 <p class="java">{{card.description|safe}}</p>
-                <a class="card__btn" href="{% url 'properties:dox_detail' card.slug %}" target="_blank">More Details <i class="fa fa-angle-double-right"></i></a>
+                <a class="card__btn" href="{% url 'properties:dox_detail' card.slug %}" target="_blank">{% trans "More Details" %} <i class="fa fa-angle-double-right"></i></a>
               </div>
             </div>
             <div class="face face2" style="background-image: url({{card.image.url}})"></div>
@@ -164,7 +177,7 @@
 
 
     <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
+    {% comment %} <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -187,7 +200,8 @@
         </div>
 
       </div>
-    </section><!-- End About Us Section -->
+    </section> {% endcomment %}
+    <!-- End About Us Section -->
 
 
     <!-- ================ Start Cantact us =================== -->
@@ -195,7 +209,7 @@
     <section class="video-Cantact-us" data-aos="zoom-in" data-aos-duration="3000" data-aos-easing="ease-in-out-cubic">
       <div class="container">
         <div class="title-box text-center white">
-          <h2 class="title">Cantact Us</h2>
+          <h2 class="title">{% trans "Cantact Us" %}</h2>
         </div>
         <div class="row">
 
@@ -245,10 +259,11 @@
 
           <div class="col-md-6">
             <div class="play-video-cantact-us">
-              <iframe src="http://player.vimeo.com/video/115919099?title=0&amp;byline=0&amp;portrait=0&amp;color=fff"
+              <iframe src="https://player.vimeo.com/video/643498461"
                 allowfullscreen>
 
               </iframe>
+<!--              <iframe src="https://player.vimeo.com/video/643498461" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>-->
             </div>
           </div>
 
@@ -262,10 +277,10 @@
     <!-- ============= Way We Work Sections =============== -->
     <div class="cards-work">
       <div class="container" data-aos="flip-down" data-aos-duration="1000" data-aos-easing="ease-in-out-cubic">
-        <h2>The Way We Work</h2><br>
-        <p>Our work culture is a pure combination of professionalism & flexibility.
-          <br>We believe in fulfilling clients
-          requirement & scaling the business that ensures an overall progressive growth.
+        <h2>{% trans "The Way We Work" %}</h2><br>
+        <p>{% trans "Our work culture is a pure combination of professionalism & flexibility." %}
+          <br>{% trans "We believe in fulfilling clients
+          requirement & scaling the business that ensures an overall progressive growth." %}
         </p>
         <!-- Slider main container -->
         <div class="swiper-container">
@@ -277,7 +292,7 @@
                 <img src="{% static './assets/img/home-pages/Creativity.jpg' %}" alt="">
               </div>
               <div class="detail">
-                <h3>Creativity & Innovations</h3>
+                <h3>{% trans "Creativity & Innovations" %}</h3>
               </div>
             </div>
             <div class="swiper-slide">
@@ -285,7 +300,7 @@
                 <img src="{% static './assets/img/home-pages/Planning.jpg' %}" alt="">
               </div>
               <div class="detail">
-                <h3>Planning & Execution</h3>
+                <h3>{% trans "Planning & Execution" %}</h3>
               </div>
             </div>
             <div class="swiper-slide">
@@ -293,7 +308,7 @@
                 <img src="{% static './assets/img/home-pages/Flexible.jpg' %}" alt="">
               </div>
               <div class="detail">
-                <h3>Flexible Handling</h3>
+                <h3>{% trans "Flexible Handling" %}</h3>
               </div>
             </div>
             <div class="swiper-slide">
@@ -301,7 +316,7 @@
                 <img src="{% static './assets/img/home-pages/Dilevery.jpg' %}" alt="">
               </div>
               <div class="detail">
-                <h3>On Time Dilevery</h3>
+                <h3>{% trans "On Time Dilevery" %}</h3>
               </div>
             </div>
           </div>
@@ -318,7 +333,7 @@
     <!-- ============= Blog Sections ============= --->
     <div class="blog-content" data-aos="zoom-in">
       <div class="container">
-        <h2>Our Blog</h2>
+        <h2>{% trans "Our Blog" %}</h2>
         <div class="row">
 
           {% for post in posts %}

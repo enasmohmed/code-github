@@ -4,18 +4,48 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+/******************************************
+2. Newsletter Popup
+******************************************/
+.modal-dialog.newsletter-popup {
+	/* background: rgba(0, 0, 0, 0) url("./img/Business Elite video.mp4") repeat scroll 0 0; */
+	width: 775px;
+	/* height: 375px; */
+	margin-top: 10%;
+}
+.newsletter-popup .modal-content {
+	background: inherit;
+	box-shadow: none;
+	border: none;
+}
+.newsletter-popup .modal-content video{
+  width: 100%;
+}
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-*{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+.newsletter-popup .close {
+	background: #000;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: -38px;
+	font-size: 24px;
+	color: #fff;
+	opacity: 1;
+	padding: 7px 15px;
+	font-weight: 300;
 }
-body {
-  font-family: 'Cairo', sans-serif !important;
+.newsletter-popup .close:hover, .close:focus {
+	background: #f82e56;
+	color: #fff;
+	outline: none;
 }
+
+
+.modal-open .modal {
+	background: rgba(0, 0, 0, 0.6);
+
+}
+
 
 a {
   color: #47b2e4;
@@ -3726,7 +3756,7 @@ font-style: italic;
 .list__blog .blog-grid .date small {
   font-size: 12px;
   letter-spacing: 0px;
-  margin-left: -14%;
+  margin-left: -34%;
 }
 .list__blog .desc .cardInfo {
 
@@ -4028,7 +4058,85 @@ font-style: italic;
 
 
 
+/* Start Standard Picture */
+.standard-picture {
+  padding: 20px;
+  /* background-color: #e3e9f3; */
+  border: 5px solid #ddd;
+  border-radius: 12px;
+}
+
+@media (max-width: 991px) {
+  .standard-picture {
+      text-align: center;
+      padding: 40px;
+  }
+}
+.standard-picture .standar-img {
+  width: 100%;
  
+}
+
+.standard-picture .standar-head {
+  font-weight: bold;
+  margin-top: 50px;
+  font-family: 'DM Serif Text', serif;
+}
+
+.standard-picture .standar-desc {
+  color: #5a5252 !important;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.head-border:after {
+  content: '';
+  display: block;
+  width: 65px;
+  height: 3px;
+  background: linear-gradient(0deg, #252E67 40%, #4b8cf9fa 100%) !important;
+  margin: 25px 0;
+}
+/* End Standard Picture*/
+ 
+/* Start Sublist Section */
+.sublist {
+  padding: 20px;
+  /* background-color: #e3e9f3; */
+  border: 5px solid #ddd;
+  border-radius: 12px;
+}
+
+@media (max-width: 991px) {
+  .sublist {
+      text-align: center;
+      padding: 40px;
+  }
+}
+.sublist .sub-img {
+  width: 80%;
+  margin-top: 50px;
+}
+.sublist .list-info{
+  margin-top: 15%;
+}
+.sublist .sublis-head {
+  font-weight: bold;
+  font-family: 'DM Serif Text', serif;
+}
+
+.sublist .sublist-desc {
+  color: #5a5252 !important;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 16px;
+  text-align: justify;
+}
+
+/* End Sublist Section */
+
 
 
 

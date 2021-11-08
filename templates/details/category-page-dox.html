@@ -9,7 +9,7 @@
       <div id="wrapper">
         <div class="content">
           <!-- Tab links -->
-          <div class="tabs" style="margin-top: 9%;">
+          <div class="tabs" id="detail_tabs" style="margin-top: 9%;">
             {% for sub in sub_category %}
             <a href="{{sub.get_absolute_url}}" class="tablinks {% if request.path == sub.get_absolute_url %} active {%endif%}" data-country="{{sub.name}}">
               <p data-title="{{sub.name}}" data-slug="{{sub.slug}}">{{sub.name}}</p>
@@ -48,65 +48,152 @@
 
                   </div>
                 </article>
+                {% if detail.message != None %}
+                  <div class="alert alert-dark text-center" role="alert" data-aos="zoom-in" data-aos-duration="3000"
+                  data-aos-easing="ease-in-out-cubic">
+                    {{detail.message|safe}}
+                  </div>
+                {% endif %}
                 <!-- ============ Slider Cards Sections =================== -->
-                <!-- TESTIMONIALS -->
-                <section class="testimonials" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-quad">
-                  <h3 class="mb-3">DoxERP Programe Features </h3>
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <div id="customers-testimonials" class="owl-carousel">
 
-                          <!--TESTIMONIAL 1 -->
-                          {% for card in cards_features %}
-                          <div class="item">
-                            <div class="shadow-effect">
-                              <i class="{{card.icon_card}}"></i>
-                              <div class="item-details">
-                                <h5>{{card.title_card}}</h5>
-                                <p>{{card.description_card|safe}}</p>
+                <!-- TESTIMONIALS -->
+                {% if cards_features_count > 0 %}
+                  <section class="testimonials" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-quad">
+                    <h3 class="mb-3">DoxERP Programe Features </h3>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <div id="customers-testimonials" class="owl-carousel">
+
+                            <!--TESTIMONIAL 1 -->
+                            {% for card in cards_features %}
+                            <div class="item">
+                              <div class="shadow-effect">
+                                <i class="{{card.icon_card}}"></i>
+                                <div class="item-details">
+                                  <h5>{{card.title_card}}</h5>
+                                  <p>{{card.description_card|safe}}</p>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          {% endfor %}
-                          <!--END OF TESTIMONIAL 1 -->
+                            {% endfor %}
+                            <!--END OF TESTIMONIAL 1 -->
 
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </section>
-                <!-- END OF TESTIMONIALS -->
+                  </section>
+                  <!-- END OF TESTIMONIALS -->
 
                   <!-- ============= Program Units Section =================== -->
                   <section class="programe-units">
-                  <div class="container" data-aos="zoom-in">
-                    <h3 class="title">Program Units</h3>
-                    <div class="slider">
-                      <div class="m-slider program__units">
-                        <div class="swiper-wrapper">
-                        {% for card in cards_units %}
-                          <div class="m-slider__item swiper-slide">
-                            <div class="box">
-                              <div class="m-card" ontouchstart>
-                                <div class="m-card__header">
-                                  <i class="{{card.icon_program}}"></i>
-                                </div>
-                                <div class="m-card__body">
-                                  <h3>{{card.title_program}}</h3>
-                                  <p>{{card.description_program|safe}}</p>
+                    <div class="container" data-aos="zoom-in">
+                      <h3 class="title">Program Units</h3>
+                      <div class="slider">
+                        <div class="m-slider program__units">
+                          <div class="swiper-wrapper">
+                          {% for card in cards_units %}
+                            <div class="m-slider__item swiper-slide">
+                              <div class="box">
+                                <div class="m-card" ontouchstart>
+                                  <div class="m-card__header">
+                                    <i class="{{card.icon_program}}"></i>
+                                  </div>
+                                  <div class="m-card__body">
+                                    <h3>{{card.title_program}}</h3>
+                                    <p>{{card.description_program|safe}}</p>
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        {% endfor %}
-                        </div><!-- .swiper-wrapper // -->
-                        <div class="swiper-pagination"></div>
-                      </div><!-- .m-slider // -->
-                    </div><!-- .slider // -->
+                          {% endfor %}
+                          </div><!-- .swiper-wrapper // -->
+                          <div class="swiper-pagination"></div>
+                        </div><!-- .m-slider // -->
+                      </div><!-- .slider // -->
 
-                  </div>
-                </section>
+                    </div>
+                  </section>
+                {% endif %}
+
+                <!-- Start Standard Picture -->
+                {% if detail_section_count > 0 %}
+                  {% for section in detail_section %}
+                    {% if forloop.first %}
+                      <div class="standard-picture mt-4">
+                        <div class="container"  data-aos="fade-up">
+                          <div class="row">
+                            <!-- Start Column 6-->
+                            <div class="col-md-6">
+                              <div class="list-info">
+                                <h3 class="standar-head head-border">{{section.title_section}}</h3>
+                                <p class="standar-desc">{{section.description_section|safe}}</p>
+                              </div>
+                            </div>
+                            <!-- End Column 6-->
+                            <!-- Start Column 6-->
+                            <div class="col-md-6">
+                              <img class="img-rsponsive mt-5 center-block standar-img" src="{{section.image_section.url}}" alt="">
+                            </div>
+                            <!-- End Column 6-->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                    {% endif %}
+                    <!-- Start Sublist Section -->
+                    {% if forloop.counter == 2 %}
+                      <div class="sublist mt-4">
+                        <div class="container">
+                          <div class="row">
+                            <!-- Start Column 6-->
+                            <div class="col-md-6">
+                              <img class="img-rsponsive center-block sub-img hidden-sm hidden-xs" src="{{section.image_section.url}}" alt="">
+                            </div>
+                            <!-- End Column 6-->
+                            <!-- Start Column 6-->
+                            <div class="col-md-6">
+                              <div class="list-info">
+                                <h3 class="sublis-head head-border">{{section.title_section}}</h3>
+                                <p class="sublist-desc">{{section.description_section|safe}}</p>
+                                
+                              </div>
+                            </div>
+                            <!-- End Column 6-->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                    {% endif %}
+                    <!-- End Sublist Section -->
+                    {% if forloop.counter == 3 %}
+                      <div class="standard-picture mt-4">
+                        <div class="container"  data-aos="fade-up">
+                          <div class="row">
+                            <!-- Start Column 6-->
+                            <div class="col-md-6">
+                              <div class="list-info">
+                                <h3 class="standar-head head-border">{{section.title_section}}</h3>
+                                <p class="standar-desc">{{section.description_section|safe}}</p>
+                              </div>
+                            </div>
+                            <!-- End Column 6-->
+                            <!-- Start Column 6-->
+                            <div class="col-md-6">
+                              <img class="img-rsponsive standar-img" src="{{section.image_section.url}}" alt="">
+                            </div>
+                            <!-- End Column 6-->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                    {% endif %}
+
+                 {% endfor %}  
+                {% endif %}    
+                <!-- End Standard Picture -->
+
               </div>
             {% endfor %}
 
@@ -117,5 +204,7 @@
       </div>
     </div>
    </main>
+
+  
 
 {% endblock body %}

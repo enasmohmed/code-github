@@ -59,6 +59,7 @@ class DetailSubCategory(models.Model):
 
 
 class DetailSection(models.Model):
+    category = models.ForeignKey(DetailSubCategory, related_name='detail_section', on_delete=models.CASCADE)
     title_section = models.CharField(max_length=100, blank=True, null=True)
     description_section = models.TextField(max_length=10000, blank=True, null=True)
     image_section = models.ImageField(upload_to='detail_page/', blank=True, null=True)

@@ -6,7 +6,7 @@ from django.views.generic import DetailView, ListView
 
 from blog.models import Post
 from properties.models import CardsFeatures, CardsProgramUnits, CardDoxHome, CardEliteHome, SubCategory, \
-    DetailSubCategory, Category
+    DetailSubCategory, Category, DetailSection
 
 
 def home(request):
@@ -27,12 +27,18 @@ def nav(request, slug):
         sub_category = SubCategory.objects.all()[3:]
     details = DetailSubCategory.objects.filter(category__slug=slug)
     cards_features = CardsFeatures.objects.filter(category__slug=slug)
+    cards_features_count = cards_features.count()
     cards_units = CardsProgramUnits.objects.filter(category__slug=slug)
+    detail_section = DetailSection.objects.filter(category__slug=slug)
+    detail_section_count = detail_section.count()
     return render(request, 'details/category-page-dox.html',
         {
             'sub_category': sub_category,
             'details': details,
             'cards_features': cards_features,
             'cards_units': cards_units,
+            'cards_features_count': cards_features_count,
+            'detail_section': detail_section,
+            'detail_section_count': detail_section_count,
         })
 

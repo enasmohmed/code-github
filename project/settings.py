@@ -71,7 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'properties.context_processor.category'
+                'project.context_processor.category'
             ],
         },
     },
@@ -126,13 +126,17 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 
 LANGUAGES = [
-    ('en', ('English')),
-    ('ar', ('Arabic')),
+    ('en', 'English'),
+    ('ar', 'العربية'),
 ]
+
+MODELTRANSLATION_LANGUAGES = ('en', 'ar')
+
+
 MODELTRANSLATION_TRANSLATION_FILES = (
     'properties.translation',
+    'blog.translation',
 )
-
 TIME_ZONE = 'UTC'
 
 USE_I18N = True

@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Business Elite</title>
+  <title>{% trans "Business Elite" %}</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -15,9 +15,9 @@
   <link href="{% static 'assets/img/Business-elite-logo-bg.png' %}" rel="icon">
 
   <!-- Google Fonts -->
-  <link
+  {% comment %} <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+    rel="stylesheet"> {% endcomment %}
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
@@ -28,7 +28,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
 
   <!-- Fonts Logo -->
-  <link href="https://blogfonts.com/css/aWQ9MTcyMDk5JnN1Yj05OSZjPWQmdHRmPURlYWxlclN0cmlrZXMtMUduWWoudHRmJm49ZGVhbGVyLXN0cmlrZXMtMg/Dealer Strikes.ttf" rel="stylesheet" type="text/css"/>
+  {% comment %} <link href="https://blogfonts.com/css/aWQ9MTcyMDk5JnN1Yj05OSZjPWQmdHRmPURlYWxlclN0cmlrZXMtMUduWWoudHRmJm49ZGVhbGVyLXN0cmlrZXMtMg/Dealer Strikes.ttf" rel="stylesheet" type="text/css"/> {% endcomment %}
 
 
 
@@ -53,14 +53,19 @@
   <!-- CSS Links -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
+  {% get_current_language as LANGUAGE_CODE %}
+    {% if LANGUAGE_CODE == 'ar' %}
+      <link type="text/css" rel="stylesheet" href="{% static 'assets/css/style-rtl.css'%}" />
+    {% endif %}
 
   <!-- =======================================================
   * Template Name:Business Elite
   ======================================================== -->
+
 </head>
 
 <body>
+
 
   <!-- ================ Start Navbar =================== -->
 
@@ -84,29 +89,36 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav m-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="{% url 'properties:home' %}">Home</a>
+                      <a class="nav-link" href="{% url 'properties:home' %}">{% trans "Home" %}</a>
                     </li>
 
-                    {% for cat in categories %}
-                    <li class="nav-item">
-                      <a class="nav-link" href="{{cat.get_absolute_url}}" target="_blank">{{cat.name}}</a>
-                    </li>
+                    {% for cat in categories_base %}
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{cat.get_absolute_url}}" target="_blank">{{cat.name}}</a>
+                      </li>
                     {% endfor %}
 
                     <li class="nav-item">
-                      <a class="nav-link" href="{% url 'blog:post_list' %}" target="_blank">Blog</a>
+                      <a class="nav-link" href="{% url 'blog:post_list' %}" target="_blank">{% trans "Blog" %}</a>
+                    </li>  
+                    <li class="nav-item">
+                      {% get_current_language as LANGUAGE_CODE %}
+                      {% get_available_languages as LANGUAGES %}
+                      {% get_language_info_list for LANGUAGES as languages %}
+                          <form action="{% url 'set_language' %}" method="post">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}" />
+                              {% for language in languages %}
+                                  {% if language.code != LANGUAGE_CODE %}
+                                      <button type="submit" name="language" value="{{ language.code }}"
+                                              style="background-color: #fff0;border: none;color: #ff">
+                                        <p class="nav-link">{{ language.name }}</p>
+                                      </button>
+                                  {% endif %}
+                              {% endfor %}
+                          </form>
                     </li>
 
-<!--                    <li class="nav-item">-->
-<!--                      <form action="{% url 'set_language' %}" method="post">-->
-<!--                          {% csrf_token %}-->
-<!--                          <input name="next" type="hidden" value="{{ redirect_to }}" />-->
-<!--                          <select name="language"  onchange="this.form.submit()">-->
-<!--                              <option value="ar" {% if LANGUAGE_CODE == "ar" %} selected="selected"{% endif %}>Arabic</option>-->
-<!--                              <option value="en"  {% if LANGUAGE_CODE == "en" %} selected="selected"{% endif %}>English</option>-->
-<!--                          </select>-->
-<!--                      </form>-->
-<!--                    </li>-->
 
                   </ul>
                 </div>
@@ -143,7 +155,7 @@
         </li>
         <li class="messenger">
           <a href="https://web.facebook.com/businesselitesoft" target="_blank">
-            Business Elite Chat
+            {% trans "Business Elite Chat" %}
             <i class="fab fa-facebook-messenger icon"></i>
           </a>
         </li>
@@ -166,17 +178,12 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Business Elite</h3>
-            <!--  <p>
-                Business Elite is a Saudi company
-                <br> specializes in cloud computing 
-              </p> -->
-
+            <h3>{% trans "Business Elite" %}</h3>
             <i class="fa fa-map-marker"></i>
             <p class="text">
-              Saudi Arabia,Jeddah,<br>
-              Al Sharafeyah ,<br>
-              Khalid Ibn Al Waleed <br><br>
+              {% trans "Saudi Arabia,Jeddah," %}<br>
+              {% trans "Al Sharafeyah" %},<br>
+              {% trans "Khalid Ibn Al Waleed" %} <br><br>
             </p>
             <i class="fa fa-mobile"></i>
             <p class="text">+96656044363</p>
@@ -245,6 +252,7 @@
   </footer><!-- End Footer -->
 
 
+
   <!-- Links -->
   <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
   <div id="preloader"></div>
@@ -253,7 +261,9 @@
 
   <!-- Chat Live -->
   <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-  <div class="elfsight-app-1b8cf06e-c727-4e5e-93cc-4caae9edbe29"></div>
+  <div class="elfsight-app-1b8cf06e-c727-4e5e-93cc-4caae9edbe29" id="chat_live"></div>
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
@@ -262,9 +272,10 @@
   <!-- Vendor JS Files -->
   <script src="{% static 'assets/js/particles.js' %}"></script>
   <script src="{% static 'assets/js/app.js' %}"></script>
+  <script src="{% static 'assets/js/lib/stats.js' %}"></script>
 
-    <!-- stats.js -->
-  <script src="{% static 'assets/lib/stats.js' %}"></script>
+
+  <!-- stats.js -->
   <script>
     var count_particles, stats, update;
     stats = new Stats;
@@ -285,6 +296,7 @@
     requestAnimationFrame(update);
   </script>
 
+
     <!-- Link Swiper's CSS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
@@ -293,7 +305,6 @@
   <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
-  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
   <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
   <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
   <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
@@ -303,6 +314,10 @@
   <!-- Template Main JS File -->
   <script src="{% static 'assets/js/main.js' %}"></script>
 
+ {% get_current_language as LANGUAGE_CODE %}
+    {% if LANGUAGE_CODE == 'ar' %}
+      <script src="{% static 'assets/js/main-rtl.js' %}"></script>
+    {% endif %}
 
 </body>
 
