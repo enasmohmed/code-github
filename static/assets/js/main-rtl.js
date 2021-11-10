@@ -190,6 +190,7 @@ const glightbox = GLightbox({
 jQuery(document).ready(function($) {
 "use strict";
 $('#customers-testimonials').owlCarousel( {
+    rtl: true,
     loop: true,
     center: true,
     items: 3,
@@ -312,3 +313,26 @@ function openTabs(el) {
 
   btnTarget.classList.add("active");
 }
+
+jQuery(document).ready(function() {
+  "use strict";
+
+  /******************************************
+    Newsletter popup
+  ******************************************/
+
+  jQuery('#myModal').appendTo("body");
+
+
+
+  function show_modal() {
+    jQuery('#myModal').modal('show');
+  }
+
+
+  jQuery('#myModal').modal({
+    keyboard: false,
+    backdrop: false,
+  });
+
+});

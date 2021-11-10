@@ -4,6 +4,12 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+@font-face {
+  font-family: "Dealer Strikes"; 
+  src: url("../fonts/Dealer-Strikes.otf");
+  font-weight:normal;
+  font-style:normal;
+}
 /******************************************
 2. Newsletter Popup
 ******************************************/
@@ -1525,7 +1531,7 @@ canvas{
   .swiper-header .swiper-slide img {
     min-width: 700px !important;
     margin-top: -21% !important;
-    margin-left: -70% !important;
+    margin-left: -55% !important;
   }
   .swiper-header .swiper-slide .content{
     margin-top: 2%;
@@ -1634,7 +1640,7 @@ canvas{
 }
 
 .swiper-header .swiper-slide .content{
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .swiper-slide-active .content{
@@ -2705,6 +2711,11 @@ font-style: italic;
   text-align: left;
   margin-bottom: 15px;
 }
+.blog-content .cardHoverText .btn{
+  width: 80%;
+  font-size: 17px;
+  font-weight: bold;
+}
 .blog-content .cardHoverText ul li{
 
 }
@@ -2753,15 +2764,13 @@ font-style: italic;
   margin-bottom: 30px;
 }
 
+
 #footer .footer-top .footer-contact h3 {
-  font-size: 28px;
+  font-size: 40px;
   margin: 0 0 10px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
-  text-transform: uppercase;
-  font-family: 'dealer-strikes-2', sans-serif !important;
-  font-style: italic;
-  font-weight: 600;
+  font-family: "Dealer Strikes" !important; 
   color: #ddd;
 }
 
@@ -3056,11 +3065,12 @@ font-style: italic;
   padding-left: clamp(1.25rem, 3vw, 2rem);
 }
 
-@media screen and (min-width: 48em){
+@media (max-width: 767px) {
   .postcard__body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 10%;
   }
 }
 
@@ -3330,7 +3340,11 @@ font-style: italic;
   margin-bottom: 2%;
 }
 
-
+@media (max-width: 991px){
+  .tabs-section{
+    margin-top: 10%;
+  }
+}
 #wrapper {
  display: flex;
  justify-content: center;
@@ -3840,7 +3854,7 @@ font-style: italic;
   position: relative; 
 }
 
-.detail_blog .tagcloud a {
+.detail_blog .tagcloud p {
   text-transform: uppercase;
   display: inline-block;
   padding: 4px 10px;
@@ -3851,16 +3865,19 @@ font-style: italic;
   border: 1px solid #ccc;
   font-size: 11px; 
 }
-.detail_blog .tagcloud a:hover {
+.detail_blog .tagcloud p:hover {
   border: 1px solid #000; 
 }
 
 .detail_blog .about-author .desc h3 {
   font-size: 24px; 
+  line-height: 5;
 }
 
 .detail_blog .about-author .bio{
-  width: 100% !important;
+  width: 30% !important;
+/*  border: 2px solid #ddd;*/
+  border-radius: 9%;
 }
 .detail_blog .comment-form-wrap {
   clear: both; 

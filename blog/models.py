@@ -2,9 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django.urls import reverse
-from django.utils import timezone
 from django.utils.text import slugify
-from taggit.managers import TaggableManager
 
 
 class Category(models.Model):
@@ -20,17 +18,23 @@ class Category(models.Model):
         return self.name
 
 
+class Tag(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
 class Post(models.Model):
     author = models.CharField(max_length=100)
-    image_author = models.ImageField(upload_to='post/', default='Business-elite-logo-none-bg.png')
-    description_author = models.TextField(max_length=1500,blank=True, null=True)
+    image_author = models.ImageField(upload_to='post/', blank=True, null=True)
     title = models.CharField(max_length=100)
-    tags = TaggableManager(blank=True)
+    tags = models.ManyToManyField(Tag)
     post_views = models.PositiveIntegerField(default=0)
     image = models.ImageField(upload_to='post/')
-    created_at = models.DateTimeField(default=timezone.now)
-    description_one = models.TextField(max_length=20000)
-    description_two = models.TextField(max_length=20000)
+    created_at = models.DateField()
+    description_one = models.TextField()
+    description_two = models.TextField()
     category = models.ForeignKey(Category, related_name='post_category', on_delete=models.CASCADE)
     slug = models.SlugField(blank=True, null=True)
 

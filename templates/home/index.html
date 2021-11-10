@@ -4,17 +4,17 @@
 {% block body %}
 
   <!-- Newsletter Popup -->
-<!--  <div id="myModal" class="modal fade">-->
-<!--    <div class="modal-dialog newsletter-popup">-->
-<!--      <div class="modal-content">-->
-<!--        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
-<!--          <video controls autoplay loop>-->
-<!--            <source src="{% static 'assets/img/Business-Elite-video.mp4' %}" type="video/mp4"/>-->
-<!--            <source src="{% static 'assets/img/Business-Elite-video.ogg' %}" type="video/ogg"/>-->
-<!--          </video>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog newsletter-popup">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <video controls autoplay loop>
+            <source src="{% static 'assets/img/Business-Elite-video.mp4' %}" type="video/mp4"/>
+            <source src="{% static 'assets/img/Business-Elite-video.ogg' %}" type="video/ogg"/>
+          </video>
+      </div>
+    </div>
+  </div>
   <!-- ================ Start Background Header ================== -->
 
   <!-- particles.js container -->
@@ -110,8 +110,7 @@
 
         <div class="row">
           <div class="col-lg-12 col-md-12 text-center">
-            <p>{% trans "We provide integrated digital solutions that helps you enhance your presence in the online business
-              world" %}</p>
+            <p>{% trans "We provide integrated digital solutions that helps you enhance your presence in the online business world" %}</p>
           </div>
         </div>
 
@@ -176,37 +175,9 @@
     </div> <!-- End Elite Solutions Sections -->
 
 
-    <!-- ======= About Us Section ======= -->
-    {% comment %} <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>About Us</h2>
-        </div>
-
-        <div class="row content">
-          <div class="col-lg-6 col-md-6">
-            <img src="{% static 'assets/img/home-pages/whoWeAre-min.png' %}">
-          </div>
-          <div class="about col-lg-6 col-md-6 ">
-            <h3>Who We Are</h3>
-            <p>We are a Saudi based company having an insight into modern<br> technology that suits vision 2030 through
-              innovative & effective solutions in cloud computing which helps small, mid-size, startups & emerging
-              companies to achieve their goals & improve their work efficiencies with our rays of services that we offer
-              at Business Elite. Our core services include Cloud & ERP solutions, Ecommerce Design & Development, Mobile
-              App Developments & Digital Marketing.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section> {% endcomment %}
-    <!-- End About Us Section -->
-
-
     <!-- ================ Start Cantact us =================== -->
 
-    <section class="video-Cantact-us" data-aos="zoom-in" data-aos-duration="3000" data-aos-easing="ease-in-out-cubic">
+    <section id="about_us" class="video-Cantact-us" data-aos="zoom-in" data-aos-duration="3000" data-aos-easing="ease-in-out-cubic">
       <div class="container">
         <div class="title-box text-center white">
           <h2 class="title">{% trans "Cantact Us" %}</h2>
@@ -218,12 +189,14 @@
               <!-- video caption #1 -->
               <div class="video-caption">
                 <div class="video-icon">
-                  <i class="fa fa-ravelry"></i>
+                  <i class="fa fa-cloud"></i>
                 </div>
                 <div class="video-caption-info">
-                  <h4>Take a look at this video to see how we work.</h4>
-                  <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna
-                    aliqua.</p>
+                  <h4>{% trans "Migrate your business to the Cloud" %}</h4>
+                  <p>{% trans "If Business Elite's mission could be summed up in one word," %}
+                      {% trans "it would be service for SMEs to benefit from a fully operational" %} 
+                      {% trans "and secure IT tools" %}
+                  </p>
                 </div>
               </div>
               <!-- End caption #1 -->
@@ -231,12 +204,13 @@
               <!-- video caption #2 -->
               <div class="video-caption">
                 <div class="video-icon">
-                  <i class="fa fa-ravelry"></i>
+                  <i class="fa fa-cogs"></i>
                 </div>
                 <div class="video-caption-info">
-                  <h4>Take a look at this video to see how we work.</h4>
-                  <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna
-                    aliqua.</p>
+                  <h4>{% trans "Take the first step on your Digital Transformation" %}</h4>
+                  <p>{% trans "Our focus is on accelerating your digital transformation by" %} 
+                     {% trans "enabling you to stay ahead of the competition" %}
+                  </p>
                 </div>
               </div>
               <!-- End caption #2 -->
@@ -244,12 +218,13 @@
               <!-- video caption #3 -->
               <div class="video-caption">
                 <div class="video-icon">
-                  <i class="fa fa-ravelry"></i>
+                  <i class="fas fa-globe"></i>
                 </div>
                 <div class="video-caption-info">
-                  <h4>Take a look at this video to see how we work.</h4>
-                  <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna
-                    aliqua.</p>
+                  <h4>{% trans "Fly with us in the sky of the Internet" %}</h4>
+                  <p>{% trans "We advise, design, build and manage multiple solutions to" %} 
+                     {% trans "boost your business in the online world" %}
+                  </p>
                 </div>
               </div>
               <!-- End caption #3 -->
@@ -259,11 +234,11 @@
 
           <div class="col-md-6">
             <div class="play-video-cantact-us">
+
               <iframe src="https://player.vimeo.com/video/643498461"
                 allowfullscreen>
-
               </iframe>
-<!--              <iframe src="https://player.vimeo.com/video/643498461" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>-->
+
             </div>
           </div>
 
@@ -272,15 +247,13 @@
     </section>
     <!-- ================ End Cantact us ====================== -->
 
-
-
     <!-- ============= Way We Work Sections =============== -->
     <div class="cards-work">
       <div class="container" data-aos="flip-down" data-aos-duration="1000" data-aos-easing="ease-in-out-cubic">
         <h2>{% trans "The Way We Work" %}</h2><br>
         <p>{% trans "Our work culture is a pure combination of professionalism & flexibility." %}
-          <br>{% trans "We believe in fulfilling clients
-          requirement & scaling the business that ensures an overall progressive growth." %}
+          <br>{% trans "We believe in fulfilling clients" %}
+          {% trans "requirement & scaling the business that ensures an overall progressive growth." %}
         </p>
         <!-- Slider main container -->
         <div class="swiper-container">
@@ -347,12 +320,8 @@
                   <h3 class="cardTitle"><a href="{{post.get_absolute_url}}">{{post.title}}</a></h3>
                   <h4 class="cardInfo">{{post.category}}</h4>
                   <!--       Only visibile when parent element is hovered over -->
-                  <div class="cardHoverText">
-                    Lorem Ipsum
-                    <ul>
-                      <li>What is Lorem Ipsum?</li>
-                      <li>rambled it to make a type specimen book</li>
-                    </ul>
+                  <div class="cardHoverText text-center">
+                    <a href="{{post.get_absolute_url}}" class="btn btn-primary">{% trans "Read More" %}</a>
                   </div>
                   <!--       Only visibile when parent element is hovered over -->
                 </div>

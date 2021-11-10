@@ -4,7 +4,53 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+@font-face {
+  font-family: "Dealer Strikes"; 
+  src: url("../fonts/Dealer-Strikes.otf");
+  font-weight:normal;
+  font-style:normal;
+}
+/******************************************
+2. Newsletter Popup
+******************************************/
+.modal-dialog.newsletter-popup {
+	/* background: rgba(0, 0, 0, 0) url("./img/Business Elite video.mp4") repeat scroll 0 0; */
+	width: 775px;
+	/* height: 375px; */
+	margin-top: 10%;
+}
+.newsletter-popup .modal-content {
+	background: inherit;
+	box-shadow: none;
+	border: none;
+}
+.newsletter-popup .modal-content video{
+  width: 100%;
+}
 
+.newsletter-popup .close {
+	background: #000;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: -38px;
+	font-size: 24px;
+	color: #fff;
+	opacity: 1;
+	padding: 7px 15px;
+	font-weight: 300;
+}
+.newsletter-popup .close:hover, .close:focus {
+	background: #f82e56;
+	color: #fff;
+	outline: none;
+}
+
+
+.modal-open .modal {
+	background: rgba(0, 0, 0, 0.6);
+
+}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -474,7 +520,8 @@ Start New Social Media
     right: 0 !important;
   }
   .header-container .header-top ul{
-    float: left;
+    float: right;
+    text-align: right;
   }
 }
 .header-container .header-top .navbar {
@@ -1570,7 +1617,7 @@ canvas{
 }
 
 .swiper-header .swiper-slide .title{
-  margin-left: 5%;
+  margin-right: 5%;
   color: #fff;
   font-size: 35px;
 }
@@ -1983,6 +2030,7 @@ canvas{
   /*justify-content:center;
   align-items:center;*/
 /*  flex-wrap:wrap;*/
+  padding-right: 3%;
 }
 
 @media (max-width: 991px) {
@@ -2077,7 +2125,7 @@ canvas{
   text-decoration:none;
   display:inline-block;
   margin-top:20px;
-  width:120px;
+  width:150px;
   height:45px;
   background-color:#fff;
   color:#222;
@@ -2648,14 +2696,14 @@ font-style: italic;
 
 
 .blog-content .cardBottom {
-  height: 35%;
+  height: 39%;
   text-wrap: normal;
   transition: 0.4s all ease;
 }
 
 .blog-content .cardText {
   min-height: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 
 .blog-content .cardTitle a {
@@ -2666,7 +2714,7 @@ font-style: italic;
 
 .blog-content .cardInfo {
   padding-top: 10px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: #252e67;
 }
@@ -2677,6 +2725,11 @@ font-style: italic;
   visibility: hidden;
   text-align: left;
   margin-bottom: 15px;
+}
+.blog-content .cardHoverText .btn{
+  width: 80%;
+  font-size: 17px;
+  font-weight: bold;
 }
 .blog-content .cardHoverText ul li{
 
@@ -2727,14 +2780,11 @@ font-style: italic;
 }
 
 #footer .footer-top .footer-contact h3 {
-  font-size: 28px;
+  font-size: 40px;
   margin: 0 0 10px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
-  text-transform: uppercase;
-  font-family: 'dealer-strikes-2', sans-serif !important;
-  font-style: italic;
-  font-weight: 600;
+  font-family: "Dealer Strikes" !important; 
   color: #ddd;
 }
 
@@ -3020,6 +3070,7 @@ font-style: italic;
 @media screen and (max-width: 48em){
   .postcard__image {
     height: min(44vw, 20rem);
+    margin-bottom: 30%;
   }
 }
 
@@ -3029,11 +3080,12 @@ font-style: italic;
   padding-left: clamp(1.25rem, 3vw, 2rem);
 }
 
-@media screen and (min-width: 48em){
+@media (max-width: 767px) {
   .postcard__body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 20%;
   }
 }
 
@@ -3157,6 +3209,10 @@ font-style: italic;
 }
  .owl-carousel .owl-next {
    right: -45px;
+}
+
+.owl-carousel .owl-stage-outer .owl-stage{
+
 }
 /** Start Test Cards Slider Category Page **/
 
@@ -3664,7 +3720,7 @@ font-style: italic;
 
 .services .card  .card__btn {
   display: table;
-  padding: 0.6em 3em;
+  padding: 0.6em 2em;
   background: #6072c552;
   color: #FFF;
   text-decoration: none;
@@ -3813,7 +3869,7 @@ font-style: italic;
   position: relative; 
 }
 
-.detail_blog .tagcloud a {
+.detail_blog .tagcloud p {
   text-transform: uppercase;
   display: inline-block;
   padding: 4px 10px;
@@ -3824,7 +3880,7 @@ font-style: italic;
   border: 1px solid #ccc;
   font-size: 11px; 
 }
-.detail_blog .tagcloud a:hover {
+.detail_blog .tagcloud p:hover {
   border: 1px solid #000; 
 }
 
@@ -3833,7 +3889,7 @@ font-style: italic;
 }
 
 .detail_blog .about-author .bio{
-  width: 100% !important;
+  width: 50% !important;
 }
 .detail_blog .comment-form-wrap {
   clear: both; 
@@ -3909,7 +3965,7 @@ font-style: italic;
 .detail_blog .search-form .fa {
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 90%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); 
@@ -4014,7 +4070,7 @@ font-style: italic;
 }
 .detail_blog .categories li a span, .sidelink li a span {
   position: absolute;
-  right: 0;
+  right: 90%;
   top: 0;
   color: #252e67; 
 }
