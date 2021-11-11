@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': 'new_db_business_elite',
         'USER': 'admin_elite',
         'PASSWORD': 'admin',
-        'HOST': 'localhost',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
