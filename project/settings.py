@@ -14,7 +14,10 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
+location = lambda x: os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', x)
+
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -26,7 +29,7 @@ SECRET_KEY = 'django-insecure-menxy4(+acyeh!r6oosdjz*+uin#%4q-sto=k0os_)a%0czk5z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['businesselite.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -64,7 +67,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS':  [location('templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -154,10 +157,9 @@ LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static", "staticroot")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    # '/var/www/static/',
 ]
 
 MEDIA_URL = '/media/'

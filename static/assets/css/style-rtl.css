@@ -51,6 +51,22 @@
 	background: rgba(0, 0, 0, 0.6);
 
 }
+
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .newsletter-popup .modal-content {
+    padding-left: 15px;
+    margin-left: 0%;
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .newsletter-popup .modal-content {
+    padding-left: 15px;
+    margin-left: 0%;
+    padding-bottom: 20px;
+  }
+}
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
