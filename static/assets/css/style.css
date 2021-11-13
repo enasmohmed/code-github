@@ -54,7 +54,7 @@
 
 @media only screen and (min-width: 0px) and (max-width: 479px) {
   .modal-dialog.newsletter-popup{
-    width: 700px;
+    width: 630px;
     margin-top: 50%;
   }
   .newsletter-popup .modal-content video{
@@ -72,7 +72,7 @@
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .modal-dialog.newsletter-popup{
-    width: 700px;
+    width: 630px;
     margin-top: 50%;
   }
   .newsletter-popup .modal-content video{
