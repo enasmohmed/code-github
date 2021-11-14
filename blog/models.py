@@ -31,11 +31,11 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     tags = models.ManyToManyField(Tag)
     post_views = models.PositiveIntegerField(default=0)
-    image = models.ImageField(upload_to='post/')
+    image = models.ImageField(upload_to='post/', blank=True, null=True)
     created_at = models.DateField()
     description_one = models.TextField()
     description_two = models.TextField()
-    category = models.ForeignKey(Category, related_name='post_category', on_delete=models.CASCADE)
+    category = models.ManyToManyField(Category, related_name='post_category')
     slug = models.SlugField(blank=True, null=True)
 
     def save(self, *args, **kwargs):
@@ -45,6 +45,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+       ordering = ['created_at']
 
     def get_absolute_url(self):
         return reverse('blog:post_detail', kwargs={'slug': self.slug})

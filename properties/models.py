@@ -86,6 +86,9 @@ class CardsFeatures(models.Model):
             self.slug = slugify(self.title_card)
         super(CardsFeatures, self).save(*args, **kwargs)  # Call the real save() method
 
+    class Meta:
+       ordering = ['-title_card']
+
     def __str__(self):
         return self.title_card
 
@@ -104,6 +107,8 @@ class CardsProgramUnits(models.Model):
 
     def __str__(self):
         return self.title_program
+
+
 
 
 class CardDoxHome(models.Model):

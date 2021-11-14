@@ -4,7 +4,7 @@
 {% block body %}
 
   <!-- Newsletter Popup -->
-  <div id="myModal" class="modal fade">
+  {% comment %} <div id="myModal" class="modal fade">
     <div class="modal-dialog newsletter-popup">
       <div class="modal-content">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -14,7 +14,7 @@
           </video>
       </div>
     </div>
-  </div> 
+  </div>  {% endcomment %}
   <!-- ================ Start Background Header ================== -->
 
   <!-- particles.js container -->
@@ -318,7 +318,9 @@
                 <div class="cardText">
                   <!--       Title and description will always show -->
                   <h3 class="cardTitle"><a href="{{post.get_absolute_url}}">{{post.title}}</a></h3>
-                  <h4 class="cardInfo">{{post.category}}</h4>
+                  {% for cat in post.category.all %}
+                  <h4 class="cardInfo">{{cat.name}}</h4>
+                  {% endfor %}
                   <!--       Only visibile when parent element is hovered over -->
                   <div class="cardHoverText text-center">
                     <a href="{{post.get_absolute_url}}" class="btn btn-primary">{% trans "Read More" %}</a>

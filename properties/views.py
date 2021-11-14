@@ -10,7 +10,7 @@ from properties.models import CardsFeatures, CardsProgramUnits, CardDoxHome, Car
 
 
 def home(request):
-    posts = Post.objects.all()
+    posts = Post.objects.all()[:4]
     cards_dox = CardDoxHome.objects.all()
     cards_elite = CardEliteHome.objects.all()
     return render(request, 'home/index.html', {

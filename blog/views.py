@@ -11,6 +11,8 @@ class PostList(ListView):
     model = Post
     paginate_by = 10   # pagination
     template_name = 'blog/post_list.html'
+    queryset = Post.objects.order_by('created_at')
+
 
     def get_queryset(self):
         name = self.request.GET.get('q', '')
