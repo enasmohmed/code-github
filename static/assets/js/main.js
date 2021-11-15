@@ -318,11 +318,15 @@ jQuery(document).ready(function() {
   ******************************************/
 
   jQuery('#myModal').appendTo("body");
-
-
+    $( '#stop-video' ).on( 'click', function(e) {
+      e.preventDefault();  
+      $('#video').attr('src', '');
+    });
 
   function show_modal() {
     jQuery('#myModal').modal('show');
+   
+    
   }
 
 

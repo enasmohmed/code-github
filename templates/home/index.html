@@ -4,17 +4,17 @@
 {% block body %}
 
   <!-- Newsletter Popup -->
-  {% comment %} <div id="myModal" class="modal fade">
+  <div id="myModal" class="modal fade">
     <div class="modal-dialog newsletter-popup">
       <div class="modal-content">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <video controls autoplay loop>
+        <button type="button" class="close" id="stop-video" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <video id="video" controls>
             <source src="{% static 'assets/img/Business-Elite-video.mp4' %}" type="video/mp4"/>
             <source src="{% static 'assets/img/Business-Elite-video.ogg' %}" type="video/ogg"/>
           </video>
       </div>
     </div>
-  </div>  {% endcomment %}
+  </div> 
   <!-- ================ Start Background Header ================== -->
 
   <!-- particles.js container -->
