@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-10 19:51+0200\n"
+"POT-Creation-Date: 2021-11-15 10:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,73 +19,74 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: templates/base.html:10 templates/base.html:183 templates/base.html:244
-#: templates/base.html:247
+#: templates/base.html:10
 msgid "Business Elite"
-msgstr "بيزنس ايليت"
+msgstr ""
+"بيزنس ايليت - الفاتورة الالكترونية | نظام الفاتورة الالكترونية | الحلول "
+"المحاسبية"
 
-#: templates/base.html:94 templates/base.html:200
+#: templates/base.html:95 templates/base.html:201
 msgid "Home"
 msgstr "الرئيسية"
 
-#: templates/base.html:104 templates/base.html:205
+#: templates/base.html:105 templates/base.html:206
 msgid "Blog"
 msgstr "المدونة"
 
-#: templates/base.html:148
+#: templates/base.html:149
 msgid "+966 12 667 6677"
 msgstr "6677 667 12 966+"
 
-#: templates/base.html:154
+#: templates/base.html:155
 msgid "+966 56 633 3723"
 msgstr "3723 633 56 966+"
 
-#: templates/base.html:160
+#: templates/base.html:161
 msgid "Business Elite Chat"
 msgstr "شات مع بيزنس ايليت"
 
-#: templates/base.html:186
+#: templates/base.html:187
 msgid "Saudi Arabia,Jeddah,"
 msgstr "المملكة العربية السعودية جدة"
 
-#: templates/base.html:187
+#: templates/base.html:188
 msgid "Al Sharafeyah"
 msgstr "الشرفية"
 
-#: templates/base.html:188
+#: templates/base.html:189
 msgid "Khalid Ibn Al Waleed"
 msgstr "خالد ابن الوليد"
 
-#: templates/base.html:191
+#: templates/base.html:192
 msgid "+96656044363"
 msgstr "96656044363+"
 
-#: templates/base.html:198
+#: templates/base.html:199
 msgid "Useful Links"
 msgstr "روابط مفيدة"
 
-#: templates/base.html:201
+#: templates/base.html:202
 msgid "About us"
 msgstr "من نحن"
 
-#: templates/base.html:210
+#: templates/base.html:211
 msgid "Our Services"
 msgstr "خدماتنا"
 
-#: templates/base.html:219
+#: templates/base.html:220
 msgid "Our Social Networks"
 msgstr "قنوات تواصلنا الاجتماعي"
 
-#: templates/base.html:220
+#: templates/base.html:221
 msgid "Follow us on social media for important updates from Business Elite"
 msgstr ""
 "تابعنا علي وسائل التواصل الاجتماعي للحصول على اهم تحديثات من بيزنس ايليت"
 
-#: templates/base.html:244
+#: templates/base.html:245
 msgid "All Rights Reserved"
 msgstr "جميع الحقوق محفوظة"
 
-#: templates/base.html:247
+#: templates/base.html:248
 msgid "Designed by"
 msgstr "تم التصميم من "
 
@@ -93,23 +94,23 @@ msgstr "تم التصميم من "
 msgid "Detail Blog"
 msgstr "تفاصيل المدونة"
 
-#: templates/blog/post_detail.html:57
+#: templates/blog/post_detail.html:59
 msgid "Comments"
 msgstr "التعليقات"
 
-#: templates/blog/post_detail.html:69
+#: templates/blog/post_detail.html:71
 msgid "Type a keyword and hit enter"
 msgstr "ادخل كلمة البحث"
 
-#: templates/blog/post_detail.html:74
+#: templates/blog/post_detail.html:76
 msgid "Category"
 msgstr "الأقسام"
 
-#: templates/blog/post_detail.html:83
+#: templates/blog/post_detail.html:85
 msgid "Recent Blog"
 msgstr "المدونات الحديثة"
 
-#: templates/blog/post_detail.html:100
+#: templates/blog/post_detail.html:102
 msgid "Tag Cloud"
 msgstr "الكلمات المفتاحية"
 
@@ -117,169 +118,169 @@ msgstr "الكلمات المفتاحية"
 msgid "Read Our Blog"
 msgstr "اقرأ مدونتنا"
 
-#: templates/home/index.html:33 templates/home/index.html:124
+#: templates/home/index.html:34 templates/home/index.html:125
 msgid "Dox Solutions"
 msgstr "حلول دوكس"
 
-#: templates/home/index.html:34
+#: templates/home/index.html:35
 msgid "Dox Solutions Cloud Programs to manage all business"
 msgstr "حلول دوكس برامج سحابية لادارة كافة أعمال المنشآت"
 
-#: templates/home/index.html:35
+#: templates/home/index.html:36
 msgid "and control provisions on their resources from anywhere"
 msgstr "واحكام السيطرة على مواردها من أي مكان"
 
-#: templates/home/index.html:35
+#: templates/home/index.html:36
 msgid "and at any time."
 msgstr ".وفي أي وقت"
 
-#: templates/home/index.html:48
+#: templates/home/index.html:49
 msgid "Digital Marketing"
 msgstr "التسويق الالكتروني"
 
-#: templates/home/index.html:49
+#: templates/home/index.html:50
 msgid "Marketing plans"
 msgstr "خطط تسويقية"
 
-#: templates/home/index.html:49
+#: templates/home/index.html:50
 msgid "Social networking management"
 msgstr "ادارة مواقع التواصل الاجتماعي"
 
-#: templates/home/index.html:50
+#: templates/home/index.html:51
 msgid "Configuring search engines"
 msgstr "تهيئة محركات البحث"
 
-#: templates/home/index.html:50
+#: templates/home/index.html:51
 msgid "Advertising campaigns"
 msgstr "حملات اعلانية"
 
-#: templates/home/index.html:63
+#: templates/home/index.html:64
 msgid "Mobile Applications"
 msgstr "تطبيقات الجوال"
 
-#: templates/home/index.html:64
+#: templates/home/index.html:65
 msgid "We develop mobile applications that meet companies and"
 msgstr "نقوم بتطوير تطبيقات الجوال تلبي احتياجات الشركات و"
 
-#: templates/home/index.html:65
+#: templates/home/index.html:66
 msgid "improve their activities in a professional and innovative manner"
 msgstr ".تحسن من أداء أنشطتهم بطريقة احترافية ومبتكرة"
 
-#: templates/home/index.html:78
+#: templates/home/index.html:79
 msgid "E-commerce Solutions"
 msgstr "التجارة الالكترونية"
 
-#: templates/home/index.html:79
+#: templates/home/index.html:80
 msgid "The strength of your business activity through the"
 msgstr " زد من قوة نشاطك التجاري من خلال "
 
-#: templates/home/index.html:80
+#: templates/home/index.html:81
 msgid "creation of an electronic website is your distinctive"
 msgstr "إنشاء موقع الكتروني يكون بوابتك المميزة للانطلاق"
 
-#: templates/home/index.html:80
+#: templates/home/index.html:81
 msgid "gateway in the e-commerce"
 msgstr "في بحر التجارة الالكترونية"
 
-#: templates/home/index.html:113
+#: templates/home/index.html:114
 msgid ""
 "We provide integrated digital solutions that helps you enhance your presence "
 "in the online business world"
 msgstr "نوفر لك حلولا رقمية متكاملة لتعزيز تواجدك في عالم الأعمال عبر الانترنت"
 
-#: templates/home/index.html:138 templates/home/index.html:165
+#: templates/home/index.html:139 templates/home/index.html:166
 msgid "More Details"
 msgstr "المزيد من التفاصيل"
 
-#: templates/home/index.html:155
+#: templates/home/index.html:156
 msgid "Elite Solutions"
 msgstr "حلول ايليت"
 
-#: templates/home/index.html:183
+#: templates/home/index.html:184
 msgid "Cantact Us"
 msgstr "التواصل معنا"
 
-#: templates/home/index.html:195
+#: templates/home/index.html:196
 msgid "Migrate your business to the Cloud"
 msgstr "قم بتحويل أعمالك إلى السحابة"
 
-#: templates/home/index.html:196
+#: templates/home/index.html:197
 msgid "If Business Elite's mission could be summed up in one word,"
 msgstr "إذا كان من الممكن تلخيص مهمة بيزنس ايليت في كلمة واحدة،"
 
-#: templates/home/index.html:197
+#: templates/home/index.html:198
 msgid "it would be service for SMEs to benefit from a fully operational"
 msgstr ""
 "فستكون هي تقديم حلول وخدمات للشركات المتوسطة، الصغيرة والناشئة للاستفادة من "
 "تكنولوجيا المعلومات الآمنة بالكامل "
 
-#: templates/home/index.html:198
+#: templates/home/index.html:199
 msgid "and secure IT tools"
 msgstr ".والتي تضمن نجاح أعمالهم"
 
-#: templates/home/index.html:210
+#: templates/home/index.html:211
 msgid "Take the first step on your Digital Transformation"
 msgstr "خذ الخطوة الأولى في تحولك الرقمي"
 
-#: templates/home/index.html:211
+#: templates/home/index.html:212
 msgid "Our focus is on accelerating your digital transformation by"
 msgstr "ينصب تركيزنا على تسريع التحول الرقمي الخاص بكل"
 
-#: templates/home/index.html:212
+#: templates/home/index.html:213
 msgid "enabling you to stay ahead of the competition"
 msgstr "عملائنا  ليتمكنوا  من البقاء في الصدارة مع أهم المنافسين"
 
-#: templates/home/index.html:224
+#: templates/home/index.html:225
 msgid "Fly with us in the sky of the Internet"
 msgstr "حلق معنا في سماء الانترنت"
 
-#: templates/home/index.html:225
+#: templates/home/index.html:226
 msgid "We advise, design, build and manage multiple solutions to"
 msgstr "ننصح، نصمم ونقدم حلول متعددة"
 
-#: templates/home/index.html:226
+#: templates/home/index.html:227
 msgid "boost your business in the online world"
 msgstr "لتعزيز أعمالكم  في عالم الإنترنت"
 
-#: templates/home/index.html:253
+#: templates/home/index.html:250
 msgid "The Way We Work"
-msgstr "كيف نعمل في نخبة الأعمال؟"
+msgstr "كيف نعمل في بيزنس ايليت؟"
 
-#: templates/home/index.html:254
+#: templates/home/index.html:251
 msgid ""
 "Our work culture is a pure combination of professionalism & flexibility."
 msgstr "العمل باحترافية ومرونة"
 
-#: templates/home/index.html:255
+#: templates/home/index.html:252
 msgid "We believe in fulfilling clients"
 msgstr "تتناسب مع متطلبات العميل"
 
-#: templates/home/index.html:256
+#: templates/home/index.html:253
 msgid ""
 "requirement & scaling the business that ensures an overall progressive "
 "growth."
 msgstr "هي أهم عوامل النجاح لدينا"
 
-#: templates/home/index.html:268
+#: templates/home/index.html:265
 msgid "Creativity & Innovations"
 msgstr "الابداع والابتكار"
 
-#: templates/home/index.html:276
+#: templates/home/index.html:273
 msgid "Planning & Execution"
 msgstr "التخطيط والتنفيذ"
 
-#: templates/home/index.html:284
+#: templates/home/index.html:281
 msgid "Flexible Handling"
 msgstr "التعامل بمرونة"
 
-#: templates/home/index.html:292
+#: templates/home/index.html:289
 msgid "On Time Dilevery"
 msgstr "الدقة في المواعيد"
 
-#: templates/home/index.html:309
+#: templates/home/index.html:306
 msgid "Our Blog"
 msgstr "مدونتنا"
 
-#: templates/home/index.html:324
+#: templates/home/index.html:323
 msgid "Read More"
 msgstr "اقرأ أكثر"

@@ -29,14 +29,14 @@
 
       <!-- Start One Slides -->
       <div class="swiper-slide">
-        <div class="col-md-6 col-sm-12 info">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 info">
           <h2 class="title">{% trans "Dox Solutions" %}</h2>
           <p class="content">{% trans "Dox Solutions Cloud Programs to manage all business" %}<br>
              {% trans "and control provisions on their resources from anywhere" %} <br>{% trans "and at any time." %}
           </p>
         </div>
 
-        <div class="col-md-6 col-sm-12">
+        <div class="col-lg-6 order-1 order-lg-2 hero-img">
           <img class="d-block w-100 vert-move" src="{% static 'assets/img/slider/Dox-Solutions/resize/Dox-Solutions-DesktopPic-01-min.png' %}" alt="First slide">
         </div>
       </div>
@@ -44,14 +44,14 @@
 
       <!-- Start Two Slides -->
       <div class="swiper-slide">
-        <div class="col-md-6 info">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 info">
           <h2 class="title">{% trans "Digital Marketing" %}</h2>
           <p class="content">- {% trans "Marketing plans" %}<br>- {% trans "Social networking management" %}<br>
             - {% trans "Configuring search engines" %}<br>- {% trans "Advertising campaigns" %}
           </p>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-lg-6 order-1 order-lg-2 hero-img">
           <img class="d-block w-100 vert-move" src="{% static 'assets/img/slider/Digital-Marketting//resize/Digital-Marketting-Desktop-Pic-01-min.png' %}" alt="First slide">
         </div>
       </div>
@@ -59,14 +59,14 @@
 
       <!-- Start Three Slides -->
       <div class="swiper-slide">
-        <div class="col-md-6 info">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 info">
           <h2 class="title">{% trans "Mobile Applications" %}</h2>
           <p class="content">{% trans "We develop mobile applications that meet companies and" %}<br>
             {% trans "improve their activities in a professional and innovative manner" %}.
           </p>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-lg-6 order-1 order-lg-2 hero-img">
           <img class="d-block w-100 vert-move" src="{% static 'assets/img/slider/Mobile-Apps/resize/Mobile-Apps-Development-Desktop-01-min.png' %}" alt="First slide">
         </div>
       </div>
@@ -74,14 +74,14 @@
 
       <!-- Start Four Slides -->
       <div class="swiper-slide">
-        <div class="col-md-6 info">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 info">
           <h2 class="title">{% trans "E-commerce Solutions" %}</h2>
           <p class="content">{% trans "The strength of your business activity through the" %}<br>
             {% trans "creation of an electronic website is your distinctive" %}<br> {% trans "gateway in the e-commerce" %}.
           </p>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-lg-6 order-1 order-lg-2 hero-img">
           <img class="d-block w-100 vert-move" src="{% static 'assets/img/slider/E-Commerce-Desktop/resize/E-Commerce-Desktop-Pic-01-min.png' %}" alt="First slide">
         </div>
       </div>
@@ -129,6 +129,7 @@
             <div class="Box col-md-4">
               <div class="FlipBox">
                 <div class="Front">
+                  <h2 class="title-enter">{% trans "More Details" %} <i class="fa fa-hand-o-down"></i></h2>
                   <img src="{{card.image.url}}">
                 </div>
                 <div class="Back">
@@ -165,7 +166,9 @@
                 <a class="card__btn" href="{% url 'properties:dox_detail' card.slug %}" target="_blank">{% trans "More Details" %} <i class="fa fa-angle-double-right"></i></a>
               </div>
             </div>
-            <div class="face face2" style="background-image: url({{card.image.url}})"></div>
+            <div class="face face2" style="background-image: url({{card.image.url}})">
+              <h4 class="elite_enter">{% trans "More Details" %} <i class="fa fa-hand-o-up"></i></h4>
+            </div>
           </div>
           {% endfor %}
         </div>
@@ -234,11 +237,12 @@
 
           <div class="col-md-6">
             <div class="play-video-cantact-us">
-
-              <iframe src="https://player.vimeo.com/video/643498461"
-                allowfullscreen>
-              </iframe>
-
+              <video class="video" controls>
+                <source src="{% static 'assets/img/Business-Elite-video2.mp4' %}" type="video/mp4"/>
+                <source src="{% static 'assets/img/Business-Elite-video2.ogg' %}" type="video/ogg"/>
+                Video not supported. 
+              </video>
+              {% comment %} <iframe class="video" src="https://player.vimeo.com/video/643498461" allowfullscreen></iframe> {% endcomment %}
             </div>
           </div>
 

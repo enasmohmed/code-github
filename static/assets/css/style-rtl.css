@@ -496,11 +496,11 @@ Start New Social Media
 
 .header-container .header-top img {
     margin-top: 0px;
-    width: 57%;
+    width: 13%;
 }
 @media (max-width: 991px) {
   .header-container .header-top img {
-    width: 20% !important;
+    width: 23% !important;
     margin-top: -9px !important;
     float: right;
   } 
@@ -518,8 +518,8 @@ Start New Social Media
 
 }
 .header-container .header-top .navbar-toggler {
-  float: right;
-  margin-top: 4%;
+  float: left;
+  margin-top: 1%;
   padding-right: 0px; 
 }
 
@@ -1586,8 +1586,8 @@ canvas{
   }
   .swiper-header .swiper-slide img {
     min-width: 700px !important;
-    margin-top: -21% !important;
-    margin-right: 0% !important;
+    margin-top: -10% !important;
+    margin-right: 8% !important;
   }
   .swiper-header .swiper-slide .content{
     margin-top: 2%;
@@ -2133,6 +2133,13 @@ canvas{
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility:hidden;
 }
+.Box .Front .title-enter{
+  text-align: center;
+  font-size: 20px;
+  padding: 4px;
+  margin: 0 auto;
+  color: #293673;
+}
 .Box .Front img{
   width:100%;
   height:100%;
@@ -2497,12 +2504,21 @@ font-style: italic;
 
 
 .play-video-cantact-us {
-  margin-bottom:30px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 2px solid #ddd;
+  overflow: hidden;
 }
 
-.play-video-cantact-us iframe {
-  width:100%;
-  height:350px;
+.play-video-cantact-us .video {
+  width: 100%;
+  height: 100%;
+  /* height: 428px;
+  width: 540px; */
+  position: absolute;
+  object-fit: fill;
 }
 
 
@@ -2743,7 +2759,7 @@ font-style: italic;
 }
 
 .blog-content .cardTitle a {
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 700;
   color: #000;
 }
@@ -3756,6 +3772,23 @@ font-style: italic;
   background-repeat: no-repeat;
   border-radius: 15px;
   /* background-image: url(../img/home-pages/Digital-Marketing.jpg);*/
+}
+
+.services  .card:hover .elite_enter{
+  height: 50px;
+  margin-top: -11%;
+  display: block;
+}
+.services  .card .face.face2 .elite_enter{
+  position: relative;
+  top: 43%;
+  text-align: center;
+  font-size: 20px;
+  color: #252e67;
+  padding: 7px;
+  background-color: #ddd;
+  width: 100%;
+  border-radius: 15px;
 }
 
 
