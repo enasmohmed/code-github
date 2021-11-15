@@ -8,10 +8,11 @@
     <div class="modal-dialog newsletter-popup">
       <div class="modal-content">
         <button type="button" class="close" id="stop-video" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <video id="video" controls>
+          <iframe id="video" src="https://player.vimeo.com/video/643498461" width="540" height="464" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+          {% comment %} <video id="video" controls>
             <source src="{% static 'assets/img/Business-Elite-video.mp4' %}" type="video/mp4"/>
             <source src="{% static 'assets/img/Business-Elite-video.ogg' %}" type="video/ogg"/>
-          </video>
+          </video> {% endcomment %}
       </div>
     </div>
   </div> 
@@ -237,11 +238,12 @@
 
           <div class="col-md-6">
             <div class="play-video-cantact-us">
-              <video class="video" controls>
+              <iframe class="video" src="https://player.vimeo.com/video/646033013" allowfullscreen></iframe>
+              {% comment %} <video class="video" controls>
                 <source src="{% static 'assets/img/Business-Elite-video2.mp4' %}" type="video/mp4"/>
                 <source src="{% static 'assets/img/Business-Elite-video2.ogg' %}" type="video/ogg"/>
                 Video not supported. 
-              </video>
+              </video> {% endcomment %}
               {% comment %} <iframe class="video" src="https://player.vimeo.com/video/643498461" allowfullscreen></iframe> {% endcomment %}
             </div>
           </div>

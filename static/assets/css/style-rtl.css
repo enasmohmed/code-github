@@ -24,7 +24,7 @@
 	box-shadow: none;
 	border: none;
 }
-.newsletter-popup .modal-content video{
+.newsletter-popup .modal-content #video{
   width: 100%;
 }
 
@@ -57,7 +57,7 @@
     width: 630px;
     margin-top: 50%;
   }
-  .newsletter-popup .modal-content video{
+  .newsletter-popup .modal-content #video{
     width: 50%;
   }
   .newsletter-popup .close {
@@ -2142,7 +2142,7 @@ canvas{
 }
 .Box .Front img{
   width:100%;
-  height:100%;
+  height:88%;
 }
 .Box .Back{
   background:linear-gradient(0deg, #252E67 40%, #4b8cf9fa 100%) !important;
@@ -2508,7 +2508,7 @@ font-style: italic;
   width: 100%;
   height: 100%;
   position: relative;
-  border: 2px solid #ddd;
+  /* border: 2px solid #ddd; */
   overflow: hidden;
 }
 

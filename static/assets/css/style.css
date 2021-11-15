@@ -15,8 +15,8 @@
 ******************************************/
 .modal-dialog.newsletter-popup {
 	/* background: rgba(0, 0, 0, 0) url("./img/Business Elite video.mp4") repeat scroll 0 0; */
-	width: 775px;
-	/* height: 375px; */
+	/* width: 540;
+	height: 464; */
 	margin-top: 10%;
 }
 .newsletter-popup .modal-content {
@@ -24,7 +24,7 @@
 	box-shadow: none;
 	border: none;
 }
-.newsletter-popup .modal-content video{
+.newsletter-popup .modal-content #video{
   width: 100%;
 }
 
@@ -57,7 +57,7 @@
     width: 630px;
     margin-top: 50%;
   }
-  .newsletter-popup .modal-content video{
+  .newsletter-popup .modal-content #video{
     width: 50%;
   }
   .newsletter-popup .close {
@@ -75,7 +75,7 @@
     width: 630px;
     margin-top: 50%;
   }
-  .newsletter-popup .modal-content video{
+  .newsletter-popup .modal-content #video{
     width: 50%;
   }
   .newsletter-popup .close {
@@ -2050,7 +2050,7 @@ canvas{
 }
 .Box .Front img{
   width:100%;
-  height:100%;
+  height:88%;
 }
 .Box .Back{
   background:linear-gradient(0deg, #252E67 40%, #4b8cf9fa 100%) !important;
