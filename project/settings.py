@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-menxy4(+acyeh!r6oosdjz*+uin#%4q-sto=k0os_)a%0czk5z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'businesselite.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*', 'businesselite.herokuapp.com']
 
 
 # Application definition
@@ -150,6 +150,7 @@ USE_L10N = True
 USE_TZ = True
 
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
+
 
 
 # Static files (CSS, JavaScript, Images)

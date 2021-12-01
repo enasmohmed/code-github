@@ -8,11 +8,11 @@
     <div class="modal-dialog newsletter-popup">
       <div class="modal-content">
         <button type="button" class="close" id="stop-video" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <iframe id="video" src="https://player.vimeo.com/video/643498461" width="540" height="464" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-          {% comment %} <video id="video" controls>
-            <source src="{% static 'assets/img/Business-Elite-video.mp4' %}" type="video/mp4"/>
-            <source src="{% static 'assets/img/Business-Elite-video.ogg' %}" type="video/ogg"/>
-          </video> {% endcomment %}
+<!--           <iframe id="video" src="https://player.vimeo.com/video/643498461" width="540" height="464" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe> -->
+          <video id="video" controls>
+            <source src="{% static 'assets/img/Business-Elite-video-speed.mp4' %}" type="video/mp4"/>
+            <source src="{% static 'assets/img/Business-Elite-video-speed.ogg' %}" type="video/ogg"/>
+          </video>
       </div>
     </div>
   </div> 
@@ -188,7 +188,7 @@
         </div>
         <div class="row">
 
-          <div class="col-md-6">
+          <div class="col-md-7">
             <div class="video-caption-main">
               <!-- video caption #1 -->
               <div class="video-caption">
@@ -236,14 +236,14 @@
             </div>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-5">
             <div class="play-video-cantact-us">
-              <iframe class="video" src="https://player.vimeo.com/video/646033013" allowfullscreen></iframe>
-              {% comment %} <video class="video" controls>
-                <source src="{% static 'assets/img/Business-Elite-video2.mp4' %}" type="video/mp4"/>
-                <source src="{% static 'assets/img/Business-Elite-video2.ogg' %}" type="video/ogg"/>
+<!--               <iframe class="video" src="https://player.vimeo.com/video/646033013" allowfullscreen></iframe> -->
+              <video class="video" controls>
+                <source src="{% static 'assets/img/Business-Elite-video-speed.mp4' %}" type="video/mp4"/>
+                <source src="{% static 'assets/img/Business-Elite-video-speed.ogg' %}" type="video/ogg"/>
                 Video not supported. 
-              </video> {% endcomment %}
+              </video> 
               {% comment %} <iframe class="video" src="https://player.vimeo.com/video/643498461" allowfullscreen></iframe> {% endcomment %}
             </div>
           </div>

@@ -2349,10 +2349,11 @@ font-style: italic;
 .video-caption-main {
   margin-bottom:30px;
   z-index: 1200;
+  /* margin-top: 10%; */
 }
 
 .video-caption {
-  margin-bottom:30px;
+  margin-bottom:70px;
   color: #E7E7E7;
 }
 
@@ -2409,7 +2410,7 @@ font-style: italic;
 .play-video-cantact-us {
   margin-bottom: 30px;
   width: 100%;
-  height: 100%;
+  /* height: 70%; */
   position: relative;
   border: 2px solid #ddd;
   overflow: hidden;
@@ -2420,8 +2421,8 @@ font-style: italic;
   height: 100%;
   /* height: 360px;
   width: 540px; */
-  position: relative;
-  object-fit: fill;
+/*  position: relative;
+  object-fit: fill;*/
 }
 
 
